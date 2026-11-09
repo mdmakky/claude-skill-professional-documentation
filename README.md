@@ -4,6 +4,18 @@ A [Claude Code](https://claude.com/claude-code) Agent Skill that makes Claude pr
 
 One JSON spec renders to **DOCX**, **PDF**, **XLSX**, or a **native Google Doc / Google Sheet**. The skill also carries the writing, formatting, sourcing and QA rules Claude follows when it uses it.
 
+## Quick install
+
+Copy and paste into a terminal (Linux or macOS, needs `git` and `python3`):
+
+```bash
+git clone https://github.com/mdmakky/claude-skill-professional-documentation ~/.claude/skills/professional-documentation
+cd ~/.claude/skills/professional-documentation && ./install.sh --google && ./tests/run.sh
+```
+
+Then restart Claude Code and ask: *"Write a market research report on X as a DOCX"*, or type `/professional-documentation`.
+Use `./install.sh` without `--google` if you only need DOCX/PDF/XLSX. The folder name must stay `professional-documentation`. Google Docs/Sheets need one more setup step: see [Google Docs and Sheets](#google-docs-and-sheets).
+
 ## What you get
 
 | Output | Tool | Notes |
