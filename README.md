@@ -100,6 +100,10 @@ tests/                    offline smoke tests (./tests/run.sh)
 - The sample in `examples/` was built from search-result summaries (see its own Scope section) and is a demonstration of format, not vetted market data.
 - Google output was verified by reading the created files back through the API, not by visual inspection.
 
+## Author
+
+[Md. Arafatuzzaman](https://github.com/mdmakky) ([@mdmakky](https://github.com/mdmakky)). Built with Claude Code.
+
 ## License
 
 MIT. See `LICENSE`.
