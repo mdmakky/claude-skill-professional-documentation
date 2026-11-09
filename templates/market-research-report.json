@@ -1,0 +1,29 @@
+{
+  "title": "[Market] Market Research Report",
+  "subtitle": "[Geography, segment, period]",
+  "doc_type": "Market Research Report",
+  "author": "[Author]",
+  "date": "[YYYY-MM-DD]",
+  "classification": "Confidential",
+  "toc": true,
+  "blocks": [
+    {"h1": "Executive summary"},
+    {"callout": "[Is the market attractive? Answer, key figure, confidence.]", "label": "Conclusion"},
+    {"h1": "Scope and method"},
+    {"p": "[Question answered, geography, segment, time frame. Data sources used and collection dates. Limitations.]"},
+    {"h1": "Market size"},
+    {"table": {"caption": "TAM / SAM / SOM", "headers": ["Layer", "Value (USD)", "Method", "Confidence", "Source"], "align": ["l", "r", "l", "l", "l"], "widths": [0.8, 1.2, 1.7, 0.9, 1.9],
+      "rows": [["TAM", "Not yet collected", "Top-down", "-", "[Source needed]"], ["SAM", "Not yet collected", "Bottom-up", "-", "[Source needed]"], ["SOM", "Not yet collected", "Share x SAM", "-", "[Assumption: rationale]"]]}},
+    {"h1": "Demand and consumer behavior"},
+    {"p": "[Search trends (Google Trends), demographics (US Census), purchase drivers. Cite each.]"},
+    {"h1": "Competitive landscape"},
+    {"table": {"caption": "Competitor comparison", "headers": ["Competitor", "Offer", "Price", "Strength", "Weakness"], "rows": [["[Name]", "[Offer]", "[Price, date]", "[...]", "[...]"]]}},
+    {"h1": "Opportunities and risks"},
+    {"bullets": ["[Opportunity: evidence]", "[Risk: evidence, mitigation]"]},
+    {"h1": "Recommendations"},
+    {"numbered": ["[Action, owner, timing]"]},
+    {"h1": "Appendix: assumptions"},
+    {"table": {"headers": ["Assumption", "Value", "Rationale", "How to verify"], "rows": [["[Assumption]", "[Value]", "[Why]", "[Source to check]"]]}},
+    {"sources": [{"claim": "[Claim]", "url": "[URL]", "date": "[YYYY-MM-DD]"}]}
+  ]
+}

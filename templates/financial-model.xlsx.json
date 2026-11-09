@@ -1,0 +1,25 @@
+{
+  "title": "Ad Profit Model (template)",
+  "sheets": [
+    {"name": "Inputs", "kind": "inputs", "title": "Inputs", "rows": [
+      {"label": "Monthly ad spend", "name": "Ad_Spend", "value": 1000, "fmt": "usd0", "tag": "assumption", "note": "Replace with budget"},
+      {"label": "Cost per click (CPC)", "name": "CPC", "value": 0.8, "fmt": "usd", "tag": "assumption", "source": "Google Keyword Planner (collect and date)"},
+      {"label": "Conversion rate", "name": "Conv_Rate", "value": 0.02, "fmt": "pct", "tag": "assumption", "note": "Replace with measured rate"},
+      {"label": "Average order value (AOV)", "name": "AOV", "value": 55, "fmt": "usd", "tag": "assumption"},
+      {"label": "Commission rate", "name": "Commission", "value": 0.04, "fmt": "pct", "tag": "assumption", "source": "Program fee schedule (cite URL, date)"},
+      {"label": "Fixed monthly costs", "name": "Fixed_Costs", "value": 50, "fmt": "usd0", "tag": "assumption"}]},
+    {"name": "Scenarios", "kind": "table", "title": "Scenario calculations", "filter": false,
+     "columns": [{"h": "Metric", "width": 28}, {"h": "Worst", "fmt": "num2"}, {"h": "Base", "fmt": "num2"}, {"h": "Best", "fmt": "num2"}],
+     "rows": [
+       ["CPC multiplier", {"v": 1.5, "input": true}, {"v": 1, "input": true}, {"v": 0.6, "input": true}],
+       ["Conversion multiplier", {"v": 0.5, "input": true}, {"v": 1, "input": true}, {"v": 1.75, "input": true}],
+       ["Clicks", "=Ad_Spend/(CPC*B5)", "=Ad_Spend/(CPC*C5)", "=Ad_Spend/(CPC*D5)"],
+       ["Orders", "=B7*Conv_Rate*B6", "=C7*Conv_Rate*C6", "=D7*Conv_Rate*D6"],
+       ["Revenue to you", "=B8*AOV*Commission", "=C8*AOV*Commission", "=D8*AOV*Commission"],
+       ["Net profit", "=B9-Ad_Spend-Fixed_Costs", "=C9-Ad_Spend-Fixed_Costs", "=D9-Ad_Spend-Fixed_Costs"],
+       ["ROAS (revenue to you / spend)", "=B9/Ad_Spend", "=C9/Ad_Spend", "=D9/Ad_Spend"],
+       ["CAC", "=IF(B8=0,0,Ad_Spend/B8)", "=IF(C8=0,0,Ad_Spend/C8)", "=IF(D8=0,0,Ad_Spend/D8)"]],
+     "cond": [{"range": "B10:D10", "op": "lt", "value": 0, "color": "red"}, {"range": "B10:D10", "op": "gt", "value": 0, "color": "green"}],
+     "chart": {"type": "bar", "title": "Net profit by scenario", "cats": "B4:D4", "vals": ["A10:D10"], "from_rows": true, "anchor": "G4", "x_title": "Scenario", "y_title": "USD"}}
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "title": "SOP-[ID]: [Procedure name]",
+  "subtitle": "[Department / process]",
+  "doc_type": "Standard Operating Procedure",
+  "author": "[Owner]",
+  "date": "[YYYY-MM-DD]",
+  "classification": "Internal",
+  "blocks": [
+    {"table": {"caption": "Document control", "headers": ["Field", "Value"], "widths": [1.6, 4.9],
+      "rows": [["SOP ID", "[ID]"], ["Version", "1.0"], ["Owner", "[Role]"], ["Approved by", "[Name, date]"], ["Review cycle", "[e.g. every 12 months]"]]}},
+    {"h1": "1. Purpose"},
+    {"p": "[What outcome this procedure guarantees, in one or two sentences.]"},
+    {"h1": "2. Scope"},
+    {"p": "[Applies to: roles, systems, situations. Excludes: ...]"},
+    {"h1": "3. Roles and responsibilities"},
+    {"table": {"headers": ["Role", "Responsibility"], "rows": [["[Role]", "[Responsibility]"]]}},
+    {"h1": "4. Prerequisites"},
+    {"bullets": ["[Access, tools, inputs required before starting]"]},
+    {"h1": "5. Procedure"},
+    {"numbered": ["[Action verb + object + expected result.]", "[Next step. Include exact values, paths or buttons.]"]},
+    {"callout": "[Condition that stops the procedure and who to contact.]", "label": "Stop and escalate"},
+    {"h1": "6. Verification"},
+    {"bullets": ["[Check that proves the procedure worked]"]},
+    {"h1": "7. Troubleshooting"},
+    {"table": {"headers": ["Symptom", "Likely cause", "Action"], "rows": [["[Symptom]", "[Cause]", "[Action]"]]}},
+    {"h1": "8. Revision history"},
+    {"table": {"headers": ["Version", "Date", "Author", "Change"], "rows": [["1.0", "[Date]", "[Name]", "Initial release"]]}}
+  ]
+}

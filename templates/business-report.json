@@ -1,0 +1,28 @@
+{
+  "title": "[Report title: states the subject]",
+  "subtitle": "[One-line scope]",
+  "doc_type": "Executive Report",
+  "author": "[Author / team]",
+  "date": "[YYYY-MM-DD]",
+  "classification": "Internal",
+  "toc": false,
+  "blocks": [
+    {"h1": "Executive summary"},
+    {"callout": "[Decision or recommendation in one sentence, with the key number.]", "label": "Recommendation"},
+    {"p": "[Purpose and scope in two sentences. Finding. Impact. Requested decision and deadline.]"},
+    {"table": {"caption": "Key figures", "headers": ["Metric", "Value", "Status", "Source"], "align": ["l", "r", "l", "l"], "widths": [2.2, 1.1, 1.1, 2.1],
+      "rows": [["[Metric]", "[Value + unit]", "Verified", "[Source, date]"], ["[Metric]", "[Value + unit]", "Assumption", "[Rationale]"]]}},
+    {"h1": "Background"},
+    {"p": "[Context the reader needs to judge the findings. Facts only, each sourced.]"},
+    {"h1": "Findings"},
+    {"h2": "[Finding 1 stated as a conclusion]"},
+    {"p": "[Evidence, then interpretation. Confidence: High / Medium / Low, because ...]"},
+    {"h1": "Options and recommendation"},
+    {"numbered": ["[Option A: cost, benefit, risk]", "[Option B: cost, benefit, risk]"]},
+    {"h1": "Risks and open questions"},
+    {"bullets": ["[Risk: likelihood, impact, mitigation]", "[Open question: owner, due date]"]},
+    {"h1": "Next steps"},
+    {"table": {"headers": ["Action", "Owner", "Due"], "rows": [["[Action]", "[Name]", "[Date]"]]}},
+    {"sources": [{"claim": "[Claim]", "url": "[URL]", "date": "[YYYY-MM-DD]"}]}
+  ]
+}
